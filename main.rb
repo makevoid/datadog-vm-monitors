@@ -1,11 +1,12 @@
 require_relative "env"
 
 def create_monitor(host:, name:, message:, monitor:)
-  name    = "#{name} - #{host}"
-  message = "#{message} on [{{host.name}}] - [{{host.ip}}]\r\n\n@makevoid @slack-devops"
-  monitor = monitor % host
-  tags    = default_tags
-  options = default_options
+  name      = "#{name} - #{host}"
+  msg_notif = "#{DEVOPS_USERNAMES.join " "} @slack-#{SLACK_ACCOUNT_NAME}-#{SLACK_CHANNEL_NAME}"
+  message   = "#{message} on [{{host.name}}] - [{{host.ip}}]\r\n\n#{msg_notif}"
+  monitor   = monitor % host
+  tags      = default_tags
+  options   = default_options
   DOG.monitor(
     "metric alert",
     monitor,

@@ -3,6 +3,9 @@ HOSTS = [
   "env01-vm2",
 ]
 
+DATADOG_EU = true
+# DATADOG_EU = false
+
 DEVOPS_USERNAMES = %w(@makevoid) # devops to notify on slack - slack usernames
 
 # see: https://app.datadoghq.eu/account/settings#integrations/slack

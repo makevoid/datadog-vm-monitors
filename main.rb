@@ -7,7 +7,7 @@ def create_monitor(host:, name:, message:, monitor:)
   monitor   = monitor % host
   tags      = default_tags
   options   = default_options
-  DOG.monitor(
+  resp = DOG.monitor(
     "metric alert",
     monitor,
     name:     name,
@@ -15,6 +15,8 @@ def create_monitor(host:, name:, message:, monitor:)
     tags:     tags,
     options:  options,
   )
+  p resp
+  resp
 end
 
 def create_monitors

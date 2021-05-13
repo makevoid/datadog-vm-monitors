@@ -27,3 +27,9 @@ rake
 ```
 
 This will create the monitors for you, you should be able to see them in the Monitors section ( https://app.datadoghq.com/monitors/manage )
+
+---
+
+Have fun!
+
+@makevoid

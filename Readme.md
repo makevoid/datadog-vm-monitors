@@ -10,7 +10,9 @@ Programmatically set up Datadog VM Monitors (Infrastructure) to check for common
 
 ### Setup
 
-- Visit https://app.datadoghq.com/account/settings#api and create an API key
+- Visit https://app.datadoghq.com/account/settings#api  and create an API key (or use the one created by default by Datadog)
+
+(note: use `.eu` not `.com` for an EU account)
 
 - Visit https://app.datadoghq.com/access/application-keys and create an APP key
 

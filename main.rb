@@ -4,7 +4,7 @@ def create_monitor(host:, name:, message:, monitor:)
   name      = "#{name} - #{host}"
   msg_notif = "#{DEVOPS_USERNAMES.join " "} @slack-#{SLACK_ACCOUNT_NAME}-#{SLACK_CHANNEL_NAME}"
   message   = "#{message} on [{{host.name}}] - [{{host.ip}}]\r\n\n#{msg_notif}"
-  monitor   = monitor % host
+  monitor   = monitor % [host, host] # replace %s with host(s)
   tags      = default_tags
   options   = default_options
   resp = DOG.monitor(

@@ -3,6 +3,13 @@ HOSTS = [
   "env01-vm2",
 ]
 
+ENV_NAME = "production"
+
+HOSTS = [
+  "#{CLIENT_NAME}-#{ENV_NAME}-vm1",
+  "#{CLIENT_NAME}-#{ENV_NAME}-vm2",
+]
+
 DATADOG_EU = true
 # DATADOG_EU = false
 

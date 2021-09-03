@@ -10,6 +10,12 @@ include ConfLoad
 API_KEY = load_conf_file "api_key"
 APP_KEY = load_conf_file "app_key"
 
+# TODO: use this config
+#
+# CLIENT_NAME = "clientname"
+# API_KEY = load_conf_file "api_key_#{CLIENT_NAME}"
+# APP_KEY = load_conf_file "app_key_#{CLIENT_NAME}"
+
 require_relative "config"
 require_relative "config_monitors"
 
